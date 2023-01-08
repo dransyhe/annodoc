@@ -3,7 +3,7 @@ layout: entry
 title: Annodoc annotation documentation support system
 ---
 
-1. My aunt's can opener can open a drum.
+1. My aunt's can opener can open a drum.  
 
 - Gold standard: 
 
@@ -53,7 +53,7 @@ obj(open-7, drum-9)
 punct(open-7, .-10)
 ~~~
 
-2. The old car broke down in the car park.
+2. The old car broke down in the car park.  
 
 - Gold standard: 
 
@@ -701,24 +701,24 @@ punct(has-3, .-53)
 
 ~~~ conllu
 # this is one sentence
-1	The	the	DET	DT	_	2	det	_	_
-2	Penn	Penn	PROPN	NNP	_	5	nsubj	_	_
-3	Treebank	Treebank	PROPN	NNP	_	2	dep	_	_
-4	tagset	tagset	NOUN	NN	_	3	dep	_	_
-5	was	be	VERB	VBD	_	0	root	_	_
-6	culled	cull	VERB	VBN	_	5	dep	_	_
-7	from	from	ADP	IN	_	13	case	_	_
-8	the	the	DET	DT	_	13	det	_	_
-9	original	original	ADJ	JJ	_	13	amod	_	_
-10	87	87	NUM	CD	_	9	dep	_	_
-11	-	-	PUNCT	HYPH	_	10	punct	_	_
-12	tag	tag	NOUN	NN	_	10	dep	_	_
-13	tagset	tagset	NOUN	NN	_	5	obl	_	_
-14	for	for	ADP	IN	_	16	case	_	_
-15	the	the	DET	DT	_	16	det	_	_
-16	Brown	Brown	PROPN	NNP	_	13	nmod	_	_
-17	corpus	corpus	PROPN	NNP	_	16	dep	_	_
-18	.	.	PUNCT	.	_	5	punct	_	_
+1	The	the	DT	DT	_	2	det	_	_
+2	Penn	Penn	NNP	NNP	_	5	nsubj	_	_
+3	Treebank	Treebank	NNP	NNP	_	2	dep	_	_
+4	tagset	tagset	NN	NN	_	3	dep	_	_
+5	was	be	VBD	VBD	_	0	root	_	_
+6	culled	cull	VBN	VBN	_	5	dep	_	_
+7	from	from	IN	IN	_	13	case	_	_
+8	the	the	DT	DT	_	13	det	_	_
+9	original	original	JJ	JJ	_	13	amod	_	_
+10	87	87	CD	CD	_	9	dep	_	_
+11	-	-	HYPH	HYPH	_	10	punct	_	_
+12	tag	tag	NN	NN	_	10	dep	_	_
+13	tagset	tagset	NN	NN	_	5	obl	_	_
+14	for	for	IN	IN	_	16	case	_	_
+15	the	the	DT	DT	_	16	det	_	_
+16	Brown	Brown	NNP	NNP	_	13	nmod	_	_
+17	corpus	corpus	NNP	NNP	_	16	dep	_	_
+18	.	.	.	.	_	5	punct	_	_
 
 ~~~
 
@@ -775,46 +775,46 @@ punct(culled-6, .-18)
 
 ~~~ conllu
 # this is one sentence
-1	For	for	ADP	IN	_	2	case	_	_
-2	example	example	NOUN	NN	_	9	obl	_	_
-3	the	the	DET	DT	_	4	det	_	_
-4	original	original	ADJ	JJ	_	9	nsubj	_	_
-5	Brown	Brown	PROPN	NNP	_	4	dep	_	_
-6	and	and	CCONJ	CC	_	4	cc	_	_
-7	C5	C5	PROPN	NNP	_	8	compound	_	_
-8	tagsets	tagset	NOUN	NNS	_	6	dep	_	_
-9	include	include	VERB	VBP	_	0	root	_	_
-10	a	a	DET	DT	_	11	det	_	_
-11	separate	separate	ADJ	JJ	_	9	obj	_	_
-12	tag	tag	NOUN	NN	_	11	dep	_	_
-13	for	for	ADP	IN	_	14	case	_	_
-14	each	each	DET	DT	_	12	nmod	_	_
-15	of	of	ADP	IN	_	17	case	_	_
-16	the	the	DET	DT	_	17	det	_	_
-17	different	different	ADJ	JJ	_	14	obl	_	_
-18	forms	form	NOUN	NNS	_	17	dep	_	_
-19	of	of	ADP	IN	_	21	case	_	_
-20	the	the	DET	DT	_	21	det	_	_
-21	verbs	verb	NOUN	NNS	_	18	nmod	_	_
-22	do	do	VERB	VB	_	24	dep	_	_
-23	(	(	PUNCT	-LRB-	_	24	punct	_	_
-24	e.g.	e.g.	ADV	RB	_	37	dep	_	_
-25	C5	C5	PROPN	NNP	_	24	obl:npmod	_	_
-26	tag	tag	NOUN	NN	_	27	compound	_	_
-27	VDD	vdd	NOUN	NN	_	25	dep	_	_
-28	for	for	ADP	IN	_	29	case	_	_
-29	did	do	VERB	VBN	_	24	advcl	_	_
-30	and	and	CCONJ	CC	_	24	cc	_	_
-31	VDG	vdg	NOUN	NN	_	32	compound	_	_
-32	tag	tag	NOUN	NN	_	30	dep	_	_
-33	for	for	ADP	IN	_	34	case	_	_
-34	doing	do	VERB	VBG	_	30	dep	_	_
-35	)	)	PUNCT	-RRB-	_	24	punct	_	_
-36	,	,	PUNCT	,	_	37	punct	_	_
-37	be	be	VERB	VB	_	38	dep	_	_
-38	and	and	CCONJ	CC	_	21	dep	_	_
-39	have	have	VERB	VB	_	38	dep	_	_
-40	.	.	PUNCT	.	_	9	punct	_	_
+1	For	for	IN	IN	_	2	case	_	_
+2	example	example	NN	NN	_	9	obl	_	_
+3	the	the	T	DT	_	4	det	_	_
+4	original	original	JJ	JJ	_	9	nsubj	_	_
+5	Brown	Brown	NNP	NNP	_	4	dep	_	_
+6	and	and	CC	CC	_	4	cc	_	_
+7	C5	C5	NNP	NNP	_	8	compound	_	_
+8	tagsets	tagset	NNS	NNS	_	6	dep	_	_
+9	include	include	VBP	VBP	_	0	root	_	_
+10	a	a	DT	DT	_	11	det	_	_
+11	separate	separate	JJ	JJ	_	9	obj	_	_
+12	tag	tag	NN	NN	_	11	dep	_	_
+13	for	for	IN	IN	_	14	case	_	_
+14	each	each	DT	DT	_	12	nmod	_	_
+15	of	of	IN	IN	_	17	case	_	_
+16	the	the	DT	DT	_	17	det	_	_
+17	different	different	JJ	JJ	_	14	obl	_	_
+18	forms	form	NNS	NNS	_	17	dep	_	_
+19	of	of	IN	IN	_	21	case	_	_
+20	the	the	DT	DT	_	21	det	_	_
+21	verbs	verb	NNS	NNS	_	18	nmod	_	_
+22	do	do	VB	VB	_	24	dep	_	_
+23	(	(	-LRB-	-LRB-	_	24	punct	_	_
+24	e.g.	e.g.	RB	RB	_	37	dep	_	_
+25	C5	C5	NNP	NNP	_	24	obl:npmod	_	_
+26	tag	tag	NN	NN	_	27	compound	_	_
+27	VDD	vdd	NN	NN	_	25	dep	_	_
+28	for	for	IN	IN	_	29	case	_	_
+29	did	do	VBN	VBN	_	24	advcl	_	_
+30	and	and	CC	CC	_	24	cc	_	_
+31	VDG	vdg	NN	NN	_	32	compound	_	_
+32	tag	tag	NN	NN	_	30	dep	_	_
+33	for	for	IN	IN	_	34	case	_	_
+34	doing	do	VBG	VBG	_	30	dep	_	_
+35	)	)	-RRB-	-RRB-	_	24	punct	_	_
+36	,	,	,	,	_	37	punct	_	_
+37	be	be	VB	VB	_	38	dep	_	_
+38	and	and	CC	CC	_	21	dep	_	_
+39	have	VERB	VERB	VB	_	38	dep	_	_
+40	.	.	.	.	_	9	punct	_	_
 
 ~~~
 
