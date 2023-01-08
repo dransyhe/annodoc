@@ -3,8 +3,8 @@ layout: entry
 title: Annodoc annotation documentation support system
 ---
 
-Gold standard: 
-
+1. My aunt's can opener can open a drum.
+- Gold standard: 
 ~~~ conllu
 # this is one sentence
 1	My	my	PRON	PRP$	_	2	nmod:poss	_	_
@@ -17,22 +17,21 @@ Gold standard:
 8	a	a	DET	DT	_	9	det	_	_
 9	drum	drum	NOUN	NN	_	7	obj	_	_
 10	.	.	PUNCT	.	_	7	punct	_	_
+
 ~~~
 
-Unlexicalised PCFG:
-
-~~~ conllu
-# this is one sentence
-1	My	my	PRON	PRP$	_	2	nmod:poss	_	_
-2	aunt	aunt	NOUN	NN	_	7	nsubj	_	_
-3	's	's	PART	POS	_	5	case	_	_
-4	can	can	NOUN	NN	_	5	compound	_	_
-5	opener	opener	NOUN	NN	_	2	nmod:poss	_	_
-6	can	can	AUX	MD	_	7	aux	_	_
-7	open	open	VERB	VB	_	0	root	_	_
-8	a	a	DET	DT	_	9	det	_	_
-9	drum	drum	NOUN	NN	_	7	obj	_	_
-10	.	.	PUNCT	.	_	7	punct	_	_
+- Unlexicalised PCFG:
+~~~
+My/PRP$ aunt/NN 's/POS can/NN opener/NN can/MD open/VB a/DT drum/NN ./.
+nmod:poss(aunt-2, My-1)
+nmod:poss(opener-5, aunt-2)
+case(aunt-2, 's-3)
+compound(opener-5, can-4)
+nsubj(open-7, opener-5)
+aux(open-7, can-6)
+root(ROOT-0, open-7)
+det(drum-9, a-8)
+obj(open-7, drum-9)
 ~~~
 
 NN-based dependency parser:
@@ -50,7 +49,7 @@ det(drum-9, a-8)
 obj(open-7, drum-9)
 punct(open-7, .-10)
 ~~~
-{:#simple-example-parse-2 .sdparse tabs="yes"}
+
 
 This is a page of documentation created using the Annodoc
 system. It serves a double purpose as *documentation* for the Annodoc
