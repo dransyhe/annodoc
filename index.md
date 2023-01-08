@@ -4,6 +4,7 @@ title: Annodoc annotation documentation support system
 ---
 
 1. My aunt's can opener can open a drum.
+
 - Gold standard: 
 
 ~~~ conllu
@@ -23,7 +24,7 @@ title: Annodoc annotation documentation support system
 
 - Unlexicalised PCFG:
 
-~~~
+~~~ sdparse
 My/PRP$ aunt/NN 's/POS can/NN opener/NN can/MD open/VB a/DT drum/NN ./.
 nmod:poss(aunt-2, My-1)
 nmod:poss(opener-5, aunt-2)
@@ -38,7 +39,7 @@ obj(open-7, drum-9)
 
 - NN-based dependency parser:
 
-~~~
+~~~ sdparse
 My/PRP$, aunt/NN, 's/POS, can/MD, opener/NN, can/MD, open/VB, a/DT, drum/NN, ./.
 nmod:poss(aunt-2, My-1)
 nmod:poss(opener-5, aunt-2)
@@ -72,7 +73,7 @@ punct(open-7, .-10)
 
 - Unlexicalised PCFG:
 
-~~~
+~~~ sdparse
 The/DT old/JJ car/NN broke/VBD down/RP in/IN the/DT car/NN park/NN ./.
 det(car-3, The-1)
 amod(car-3, old-2)
@@ -87,7 +88,7 @@ obl:in(broke-4, park-9)
 
 - NN-based dependency parser:
 
-~~~
+~~~ sdparse
 The/DT, old/JJ, car/NN, broke/VBD, down/RP, in/IN, the/DT, car/NN, park/NN, ./.
 det(car-3, The-1)
 amod(car-3, old-2)
@@ -106,95 +107,102 @@ punct(broke-4, .-10)
 
 ~~~ conllu
 # this is one sentence
-1	My	my	PRON	PRP$	_	2	nmod:poss	_	_
-2	aunt	aunt	NOUN	NN	_	7	nsubj	_	_
-3	's	's	PART	POS	_	5	case	_	_
-4	can	can	NOUN	NN	_	5	compound	_	_
-5	opener	opener	NOUN	NN	_	2	nmod:poss	_	_
-6	can	can	AUX	MD	_	7	aux	_	_
-7	open	open	VERB	VB	_	0	root	_	_
-8	a	a	DET	DT	_	9	det	_	_
-9	drum	drum	NOUN	NN	_	7	obj	_	_
-10	.	.	PUNCT	.	_	7	punct	_	_
+1	At	at	ADV	RB	_	2	advmod	_	_
+2	least	least	ADV	RBS	_	4	advmod	_	_
+3	two	two	NUM	CD	_	2	dep	_	_
+4	men	man	NOUN	NNS	_	5	nsubj	_	_
+5	broke	break	VERB	VBD	_	0	root	_	_
+6	in	in	ADP	RP	_	5	dep	_	_
+7	and	and	CCONJ	CC	_	5	cc	_	_
+8	stole	steal	VERB	VBD	_	7	dep	_	_
+9	my	my	PRON	PRP$	_	10	nmod:poss	_	_
+10	tv	tv	NOUN	NN	_	8	obj	_	_
+11	.	.	PUNCT	.	_	5	punct	_	_
 
-~~~
+~~~ sdparse
 
 - Unlexicalised PCFG:
 
 ~~~
-My/PRP$ aunt/NN 's/POS can/NN opener/NN can/MD open/VB a/DT drum/NN ./.
-nmod:poss(aunt-2, My-1)
-nmod:poss(opener-5, aunt-2)
-case(aunt-2, 's-3)
-compound(opener-5, can-4)
-nsubj(open-7, opener-5)
-aux(open-7, can-6)
-root(ROOT-0, open-7)
-det(drum-9, a-8)
-obj(open-7, drum-9)
+At/IN least/JJS two/CD men/NNS broke/VBD in/RP and/CC stole/VBD my/PRP$ TV/NN ./.
+case(least-2, At-1)
+obl:npmod(two-3, least-2)
+nummod(men-4, two-3)
+nsubj(broke-5, men-4)
+nsubj(stole-8, men-4)
+root(ROOT-0, broke-5)
+compound:prt(broke-5, in-6)
+cc(stole-8, and-7)
+conj:and(broke-5, stole-8)
+nmod:poss(TV-10, my-9)
+obj(stole-8, TV-10)
 ~~~
 
 - NN-based dependency parser:
 
-~~~
-My/PRP$, aunt/NN, 's/POS, can/MD, opener/NN, can/MD, open/VB, a/DT, drum/NN, ./.
-nmod:poss(aunt-2, My-1)
-nmod:poss(opener-5, aunt-2)
-case(aunt-2, 's-3)
-aux(opener-5, can-4)
-nsubj(open-7, opener-5)
-aux(open-7, can-6)
-root(ROOT-0, open-7)
-det(drum-9, a-8)
-obj(open-7, drum-9)
-punct(open-7, .-10)
+~~~ sdparse
+At/RB, least/RBS, two/CD, men/NNS, broke/VBD, in/IN, and/CC, stole/VBD, my/PRP$, TV/NN, ./.
+case(least-2, At-1)
+obl:npmod(two-3, least-2)
+nummod(men-4, two-3)
+nsubj(broke-5, men-4)
+root(ROOT-0, broke-5)
+compound:prt(broke-5, in-6)
+cc(stole-8, and-7)
+conj(broke-5, stole-8)
+nmod:poss(TV-10, my-9)
+obj(stole-8, TV-10)
+punct(broke-5, .-11)
 ~~~
 
-4. My aunt's can opener can open a drum.
+4. Kim and Sandy both broke up with their partners.
 - Gold standard: 
+
 ~~~ conllu
 # this is one sentence
-1	My	my	PRON	PRP$	_	2	nmod:poss	_	_
-2	aunt	aunt	NOUN	NN	_	7	nsubj	_	_
-3	's	's	PART	POS	_	5	case	_	_
-4	can	can	NOUN	NN	_	5	compound	_	_
-5	opener	opener	NOUN	NN	_	2	nmod:poss	_	_
-6	can	can	AUX	MD	_	7	aux	_	_
-7	open	open	VERB	VB	_	0	root	_	_
-8	a	a	DET	DT	_	9	det	_	_
-9	drum	drum	NOUN	NN	_	7	obj	_	_
-10	.	.	PUNCT	.	_	7	punct	_	_
+1	Kim	Kim	PROPN	NNP	_	5	nsubj	_	_
+2	and	and	CCONJ	CC	_	1	cc	_	_
+3	Sandy	Sandy	PROPN	NNP	_	2	dep	_	_
+4	both	both	ADV	RB	_	5	advmod	_	_
+5	broke	break	VERB	VBD	_	0	root	_	_
+6	up	up	ADP	RP	_	5	dep	_	_
+7	with	with	ADP	IN	_	9	case	_	_
+8	their	they	PRON	PRP$	_	9	nmod:poss	_	_
+9	partners	partner	NOUN	NNS	_	5	obl	_	_
+10	.	.	PUNCT	.	_	5	punct	_	_
 
 ~~~
 
 - Unlexicalised PCFG:
+
 ~~~
-My/PRP$ aunt/NN 's/POS can/NN opener/NN can/MD open/VB a/DT drum/NN ./.
-nmod:poss(aunt-2, My-1)
-nmod:poss(opener-5, aunt-2)
-case(aunt-2, 's-3)
-compound(opener-5, can-4)
-nsubj(open-7, opener-5)
-aux(open-7, can-6)
-root(ROOT-0, open-7)
-det(drum-9, a-8)
-obj(open-7, drum-9)
+Kim/NNP and/CC Sandy/NNP both/DT broke/VBD up/RP with/IN their/PRP$ partners/NNS ./.
+nsubj(broke-5, Kim-1)
+cc(Sandy-3, and-2)
+conj:and(Kim-1, Sandy-3)
+nsubj(broke-5, Sandy-3)
+dep(broke-5, both-4)
+root(ROOT-0, broke-5)
+compound:prt(broke-5, up-6)
+case(partners-9, with-7)
+nmod:poss(partners-9, their-8)
+obl:with(broke-5, partners-9)
 ~~~
 
 - NN-based dependency parser:
 
 ~~~
-My/PRP$, aunt/NN, 's/POS, can/MD, opener/NN, can/MD, open/VB, a/DT, drum/NN, ./.
-nmod:poss(aunt-2, My-1)
-nmod:poss(opener-5, aunt-2)
-case(aunt-2, 's-3)
-aux(opener-5, can-4)
-nsubj(open-7, opener-5)
-aux(open-7, can-6)
-root(ROOT-0, open-7)
-det(drum-9, a-8)
-obj(open-7, drum-9)
-punct(open-7, .-10)
+Kim/NNP, and/CC, Sandy/NNP, both/CC, broke/VBD, up/RP, with/IN, their/PRP$, partners/NNS, ./.
+nsubj(broke-5, Kim-1)
+cc(Sandy-3, and-2)
+conj(Kim-1, Sandy-3)
+dep(Kim-1, both-4)
+root(ROOT-0, broke-5)
+compound:prt(broke-5, up-6)
+case(partners-9, with-7)
+nmod:poss(partners-9, their-8)
+obl(broke-5, partners-9)
+punct(broke-5, .-10)
 ~~~
 
 
