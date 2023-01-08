@@ -682,12 +682,16 @@ character (`#`). The following example illustrates these:
 
 ~~~ conllu
 # this is one sentence
-1    Dogs   dog    NOUN    NNS    _    2    nsubj    _    _
-2    run    run    VERB    VBP    _    0    ROOT     _    _
-
-# this is a second sentence
-1    Cats   cat    NOUN    NNS    _    2    nsubj    _    _
-2    sleep  sleep  VERB    VBP    _    0    ROOT     _    _
+1	My	my	PRON	PRP$	_	2	nmod:poss	_	_
+2	aunt	aunt	NOUN	NN	_	7	nsubj	_	_
+3	's	's	PART	POS	_	5	case	_	_
+4	can	can	NOUN	NN	_	5	compound	_	_
+5	opener	opener	NOUN	NN	_	2	nmod:poss	_	_
+6	can	can	AUX	MD	_	7	aux	_	_
+7	open	open	VERB	VB	_	0	root	_	_
+8	a	a	DET	DT	_	9	det	_	_
+9	drum	drum	NOUN	NN	_	7	obj	_	_
+10	.	.	PUNCT	.	_	7	punct	_	_
 ~~~
 
 #### CoNLL-U format field definitions
