@@ -9,16 +9,16 @@ title: Annodoc annotation documentation support system
 
 ~~~ conllu
 # this is one sentence
-1	My	my	PRON	PRP$	_	2	nmod:poss	_	_
-2	aunt	aunt	NOUN	NN	_	7	nsubj	_	_
-3	's	's	PART	POS	_	5	case	_	_
-4	can	can	NOUN	NN	_	5	compound	_	_
-5	opener	opener	NOUN	NN	_	2	nmod:poss	_	_
-6	can	can	AUX	MD	_	7	aux	_	_
-7	open	open	VERB	VB	_	0	root	_	_
-8	a	a	DET	DT	_	9	det	_	_
-9	drum	drum	NOUN	NN	_	7	obj	_	_
-10	.	.	PUNCT	.	_	7	punct	_	_
+1	My	my	PRP$	PRP$	_	2	nmod:poss	_	_
+2	aunt	aunt	NN	NN	_	7	nsubj	_	_
+3	's	's	POS	POS	_	5	case	_	_
+4	can	can	NN	NN	_	5	compound	_	_
+5	opener	opener	NN	NN	_	2	nmod:poss	_	_
+6	can	can	MD	MD	_	7	aux	_	_
+7	open	open	VB	VB	_	0	root	_	_
+8	a	a	DT	DT	_	9	det	_	_
+9	drum	drum	NN	NN	_	7	obj	_	_
+10	.	.	.	.	_	7	punct	_	_
 
 ~~~
 
@@ -59,16 +59,16 @@ punct(open-7, .-10)
 
 ~~~ conllu
 # this is one sentence
-1	The	the	DET	DT	_	3	det	_	_
-2	old	old	ADJ	JJ	_	3	amod	_	_
-3	car	car	NOUN	NN	_	4	nsubj	_	_
-4	broke	break	VERB	VBD	_	0	root	_	_
-5	down	down	ADP	RP	_	4	dep	_	_
-6	in	in	ADP	IN	_	9	case	_	_
-7	the	the	DET	DT	_	9	det	_	_
-8	car	car	NOUN	NN	_	9	compound	_	_
-9	park	park	NOUN	NN	_	4	obl	_	_
-10	.	.	PUNCT	.	_	4	punct	_	_
+1	The	the	DT	DT	_	3	det	_	_
+2	old	old	JJ	JJ	_	3	amod	_	_
+3	car	car	NN	NN	_	4	nsubj	_	_
+4	broke	break	VBD	VBD	_	0	root	_	_
+5	down	down	RP	RP	_	4	dep	_	_
+6	in	in	IN	IN	_	9	case	_	_
+7	the	the	DT	DT	_	9	det	_	_
+8	car	car	NN	NN	_	9	compound	_	_
+9	park	park	NN	NN	_	4	obl	_	_
+10	.	.	.	.	_	4	punct	_	_
 
 ~~~
 
@@ -103,23 +103,23 @@ obl(broke-4, park-9)
 punct(broke-4, .-10)
 ~~~
 
-3. At least two men broke in and stole my TV.
+3. At least two men broke in and stole my TV.  
 
 - Gold standard: 
 
 ~~~ conllu
 # this is one sentence
-1	At	at	ADV	RB	_	2	advmod	_	_
-2	least	least	ADV	RBS	_	4	advmod	_	_
-3	two	two	NUM	CD	_	2	dep	_	_
-4	men	man	NOUN	NNS	_	5	nsubj	_	_
-5	broke	break	VERB	VBD	_	0	root	_	_
-6	in	in	ADP	RP	_	5	dep	_	_
-7	and	and	CCONJ	CC	_	5	cc	_	_
-8	stole	steal	VERB	VBD	_	7	dep	_	_
-9	my	my	PRON	PRP$	_	10	nmod:poss	_	_
-10	tv	tv	NOUN	NN	_	8	obj	_	_
-11	.	.	PUNCT	.	_	5	punct	_	_
+1	At	at	RB	RB	_	2	advmod	_	_
+2	least	least	RBS	RBS	_	4	advmod	_	_
+3	two	two	CD	CD	_	2	dep	_	_
+4	men	man	NNS	NNS	_	5	nsubj	_	_
+5	broke	break	VBD	VBD	_	0	root	_	_
+6	in	in	RP	RP	_	5	dep	_	_
+7	and	and	CC	CC	_	5	cc	_	_
+8	stole	steal	VBD	VBD	_	7	dep	_	_
+9	my	my	PRP$	PRP$	_	10	nmod:poss	_	_
+10	tv	tv	NN	NN	_	8	obj	_	_
+11	.	.	.	.	_	5	punct	_	_
 
 ~~~
 
@@ -157,22 +157,22 @@ obj(stole-8, TV-10)
 punct(broke-5, .-11)
 ~~~
 
-4. Kim and Sandy both broke up with their partners.
+4. Kim and Sandy both broke up with their partners.  
 
 - Gold standard: 
 
 ~~~ conllu
 # this is one sentence
-1	Kim	Kim	PROPN	NNP	_	5	nsubj	_	_
-2	and	and	CCONJ	CC	_	1	cc	_	_
-3	Sandy	Sandy	PROPN	NNP	_	2	dep	_	_
-4	both	both	ADV	RB	_	5	advmod	_	_
-5	broke	break	VERB	VBD	_	0	root	_	_
-6	up	up	ADP	RP	_	5	dep	_	_
-7	with	with	ADP	IN	_	9	case	_	_
-8	their	they	PRON	PRP$	_	9	nmod:poss	_	_
-9	partners	partner	NOUN	NNS	_	5	obl	_	_
-10	.	.	PUNCT	.	_	5	punct	_	_
+1	Kim	Kim	NNP	NNP	_	5	nsubj	_	_
+2	and	and	CC	CC	_	1	cc	_	_
+3	Sandy	Sandy	NNP	NNP	_	2	dep	_	_
+4	both	both	RB	RB	_	5	advmod	_	_
+5	broke	break	VBD	VBD	_	0	root	_	_
+6	up	up	RP	RP	_	5	dep	_	_
+7	with	with	IN	IN	_	9	case	_	_
+8	their	they	PRP$	PRP$	_	9	nmod:poss	_	_
+9	partners	partner	NNS	NNS	_	5	obl	_	_
+10	.	.	.	.	_	5	punct	_	_
 
 ~~~
 
@@ -209,27 +209,27 @@ punct(broke-5, .-10)
 ~~~
 
 
-5. The horse as well as the rabbits which we wanted to eat has escaped.
+5. The horse as well as the rabbits which we wanted to eat has escaped.  
 
 - Gold standard: 
 
 ~~~ conllu
 # this is one sentence
-1	The	the	DET	DT	_	2	det	_	_
-2	horse	horse	NOUN	NN	_	14	nsubj	_	_
-3	as	as	ADV	RB	_	4	advmod	_	_
-4	well	well	ADV	RB	_	7	dep	_	_
-5	as	as	ADV	RB	_	4	advmod	_	_
-6	the	the	DET	DT	_	7	det	_	_
-7	rabbits	rabbit	NOUN	NNS	_	2	cc	_	_
-8	which	which	DET	WDT	_	10	dep	_	_
-9	we	we	PRON	PRP	_	10	dep	_	_
-10	wanted	want	VERB	VBD	_	7	dep	_	_
-11	to	to	ADP	TO	_	10	xcomp	_	_
-12	eat	eat	VERB	VB	_	11	dep	_	_
-13	has	have	AUX	VBZ	_	14	aux	_	_
-14	escaped	escape	VERB	VBN	_	0	root	_	_
-15	.	.	PUNCT	.	_	14	punct	_	_
+1	The	the	DT	DT	_	2	det	_	_
+2	horse	horse	NN	NN	_	14	nsubj	_	_
+3	as	as	RB	RB	_	4	advmod	_	_
+4	well	well	RB	RB	_	7	dep	_	_
+5	as	as	RB	RB	_	4	advmod	_	_
+6	the	the	DT	DT	_	7	det	_	_
+7	rabbits	rabbit	NNS	NNS	_	2	cc	_	_
+8	which	which	WDT	WDT	_	10	dep	_	_
+9	we	we	PRP	PRP	_	10	dep	_	_
+10	wanted	want	VBD	VBD	_	7	dep	_	_
+11	to	to	TO	TO	_	10	xcomp	_	_
+12	eat	eat	VB	VB	_	11	dep	_	_
+13	has	have	VBZ	VBZ	_	14	aux	_	_
+14	escaped	escape	VBN	VBN	_	0	root	_	_
+15	.	.	.	.	_	14	punct	_	_
 
 ~~~
 
@@ -277,28 +277,28 @@ root(ROOT-0, escaped-14)
 punct(escaped-14, .-15)
 ~~~
 
-6. It was my aunt's car which we sold at auction last year in February.
+6. It was my aunt's car which we sold at auction last year in February.  
 
 - Gold standard: 
 
 ~~~ conllu
 # this is one sentence
-1	It	it	PRON	PRP	_	4	nsubj	_	_
-2	was	be	VERB	VBD	_	4	cop	_	_
-3	my	my	PRON	PRP$	_	4	nmod:poss	_	_
-4	aunt	aunt	NOUN	NN	_	0	root	_	_
-5	's	's	PART	POS	_	6	case	_	_
-6	car	car	NOUN	NN	_	4	nmod:poss	_	_
-7	which	which	DET	WDT	_	9	dep	_	_
-8	we	we	PRON	PRP	_	9	nsubj	_	_
-9	sold	sell	VERB	VBD	_	4	dep	_	_
-10	at	at	ADP	IN	_	11	case	_	_
-11	auction	auction	NOUN	NN	_	9	obl	_	_
-12	last	last	ADV	RB	_	9	advmod	_	_
-13	year	year	NOUN	NN	_	12	obl:npmod	_	_
-14	in	in	ADP	IN	_	15	case	_	_
-15	February	February	PROPN	NNP	_	9	obl	_	_
-16	.	.	PUNCT	.	_	4	punct	_	_
+1	It	it	PRP	PRP	_	4	nsubj	_	_
+2	was	be	VBD	VBD	_	4	cop	_	_
+3	my	my	PRP$	PRP$	_	4	nmod:poss	_	_
+4	aunt	aunt	NN	NN	_	0	root	_	_
+5	's	's	POS	POS	_	6	case	_	_
+6	car	car	NN	NN	_	4	nmod:poss	_	_
+7	which	which	WDT	WDT	_	9	dep	_	_
+8	we	we	PRP	PRP	_	9	nsubj	_	_
+9	sold	sell	VBD	VBD	_	4	dep	_	_
+10	at	at	IN	IN	_	11	case	_	_
+11	auction	auction	NN	NN	_	9	obl	_	_
+12	last	last	RB	RB	_	9	advmod	_	_
+13	year	year	NN	NN	_	12	obl:npmod	_	_
+14	in	in	IN	IN	_	15	case	_	_
+15	February	February	NNP	NNP	_	9	obl	_	_
+16	.	.	.	.	_	4	punct	_	_
 
 ~~~
 
@@ -346,33 +346,33 @@ obl(sold-9, February-15)
 punct(car-6, .-16)
 ~~~
 
-7. Natural disasters – storms, flooding, hurricanes – occur infrequently but cause devastation that strains resources to breaking point.
+7. Natural disasters – storms, flooding, hurricanes – occur infrequently but cause devastation that strains resources to breaking point.  
 
 - Gold standard: 
 
 ~~~ conllu
 # this is one sentence
-1	Natural	natural	ADJ	JJ	_	2	amod	_	_
-2	disasters	disaster	NOUN	NNS	_	10	nsubj	_	_
-3	–	–	PUNCT	:	_	4	punct	_	_
-4	storms	storm	NOUN	NNS	_	2	dep	_	_
-5	,	,	PUNCT	,	_	6	punct	_	_
-6	flooding	flooding	NOUN	NN	_	4	dep	_	_
-7	,	,	PUNCT	,	_	8	punct	_	_
-8	hurricanes	hurricane	NOUN	NNS	_	4	dep	_	_
-9	–	–	PUNCT	:	_	4	punct	_	_
-10	occur	occur	VERB	VBP	_	0	root	_	_
-11	infrequently	infrequently	ADV	RB	_	10	advmod	_	_
-12	but	but	CCONJ	CC	_	10	cc	_	_
-13	cause	cause	VERB	VBP	_	12	dep	_	_
-14	devastation	devastation	NOUN	NN	_	13	obj	_	_
-15	that	that	DET	WDT	_	16	dep	_	_
-16	strains	strain	VERB	VBZ	_	14	dep	_	_
-17	resources	resource	NOUN	NNS	_	16	obj	_	_
-18	to	to	ADP	IN	_	20	case	_	_
-19	breaking	breaking	NOUN	NN	_	20	compound	_	_
-20	point	point	NOUN	NN	_	16	obl	_	_
-21	.	.	PUNCT	.	_	10	punct	_	_
+1	Natural	natural	JJ	JJ	_	2	amod	_	_
+2	disasters	disaster	NNS	NNS	_	10	nsubj	_	_
+3	–	–	:	:	_	4	punct	_	_
+4	storms	storm	NNS	NNS	_	2	dep	_	_
+5	,	,	,	,	_	6	punct	_	_
+6	flooding	flooding	NN	NN	_	4	dep	_	_
+7	,	,	,	,	_	8	punct	_	_
+8	hurricanes	hurricane	NNS	NNS	_	4	dep	_	_
+9	–	–	:	:	_	4	punct	_	_
+10	occur	occur	VBP	VBP	_	0	root	_	_
+11	infrequently	infrequently	RB	RB	_	10	advmod	_	_
+12	but	but	CC	CC	_	10	cc	_	_
+13	cause	cause	VBP	VBP	_	12	dep	_	_
+14	devastation	devastation	NN	NN	_	13	obj	_	_
+15	that	that	WDT	WDT	_	16	dep	_	_
+16	strains	strain	VBZ	VBZ	_	14	dep	_	_
+17	resources	resource	NNS	NNS	_	16	obj	_	_
+18	to	to	IN	IN	_	20	case	_	_
+19	breaking	breaking	NN	NN	_	20	compound	_	_
+20	point	point	NN	NN	_	16	obl	_	_
+21	.	.	.	.	_	10	punct	_	_
 
 ~~~
 
@@ -428,39 +428,39 @@ nmod(resources-17, point-20)
 punct(storms-4, .-21)
 ~~~
 
-8. Letters delivered on time by old-fashioned means are increasingly rare, so it is as well that that is not the only option available.
+8. Letters delivered on time by old-fashioned means are increasingly rare, so it is as well that that is not the only option available.  
 
 - Gold standard: 
 
 ~~~ conllu
 # this is one sentence
-1	Letters	letter	NOUN	NNS	_	12	nsubj	_	_
-2	delivered	deliver	VERB	VBN	_	1	dep	_	_
-3	on	on	ADP	IN	_	4	case	_	_
-4	time	time	NOUN	NN	_	2	obl	_	_
-5	by	by	ADP	IN	_	9	case	_	_
-6	old	old	ADJ	JJ	_	8	dep	_	_
-7	-	-	PUNCT	HYPH	_	6	punct	_	_
-8	fashioned	fashioned	ADJ	JJ	_	9	amod	_	_
-9	means	means	NOUN	NNS	_	2	obl	_	_
-10	are	be	VERB	VBP	_	12	cop	_	_
-11	increasingly	increasingly	ADV	RB	_	12	advmod	_	_
-12	rare	rare	ADJ	JJ	_	0	root	_	_
-13	,	,	PUNCT	,	_	14	punct	_	_
-14	so	so	ADV	RB	_	16	advmod	_	_
-15	it	it	PRON	PRP	_	16	nsubj	_	_
-16	is	be	VERB	VBZ	_	12	dep	_	_
-17	as	as	ADV	RB	_	18	advmod	_	_
-18	well	well	ADV	RB	_	16	advmod	_	_
-19	that	that	ADP	IN	_	21	dep	_	_
-20	that	that	PRON	DT	_	21	nsubj	_	_
-21	is	be	VERB	VBZ	_	16	xcomp	_	_
-22	not	not	PART	RB	_	21	advmod	_	_
-23	the	the	DET	DT	_	25	det	_	_
-24	only	only	ADJ	JJ	_	25	amod	_	_
-25	option	option	NOUN	NN	_	22	obl:npmod	_	_
-26	available	available	ADJ	JJ	_	25	amod	_	_
-27	.	.	PUNCT	.	_	12	punct	_	_
+1	Letters	letter	NNS	NNS	_	12	nsubj	_	_
+2	delivered	deliver	VBN	VBN	_	1	dep	_	_
+3	on	on	IN	IN	_	4	case	_	_
+4	time	time	NN	NN	_	2	obl	_	_
+5	by	by	IN	IN	_	9	case	_	_
+6	old	old	JJ	JJ	_	8	dep	_	_
+7	-	-	HYPH	HYPH	_	6	punct	_	_
+8	fashioned	fashioned	JJ	JJ	_	9	amod	_	_
+9	means	means	NNS	NNS	_	2	obl	_	_
+10	are	be	VBP	VBP	_	12	cop	_	_
+11	increasingly	increasingly	RB	RB	_	12	advmod	_	_
+12	rare	rare	JJ	JJ	_	0	root	_	_
+13	,	,	,	,	_	14	punct	_	_
+14	so	so	RB	RB	_	16	advmod	_	_
+15	it	it	PRP	PRP	_	16	nsubj	_	_
+16	is	be	VBZ	VBZ	_	12	dep	_	_
+17	as	as	RB	RB	_	18	advmod	_	_
+18	well	well	RB	RB	_	16	advmod	_	_
+19	that	that	IN	IN	_	21	dep	_	_
+20	that	that	DT	DT	_	21	nsubj	_	_
+21	is	be	VBZ	VBZ	_	16	xcomp	_	_
+22	not	not	RB	RB	_	21	advmod	_	_
+23	the	the	DT	DT	_	25	det	_	_
+24	only	only	JJ	JJ	_	25	amod	_	_
+25	option	option	NN	NN	_	22	obl:npmod	_	_
+26	available	available	JJ	JJ	_	25	amod	_	_
+27	.	.	.	.	_	12	punct	_	_
 
 ~~~
 
@@ -528,65 +528,65 @@ amod(option-25, available-26)
 punct(rare-12, .-27)
 ~~~
 
-9. English also has many words of more or less unique function, including interjections (oh, ah), negatives (no, not), politeness markers (please, thank you), and the existential 'there' (there are horses but not unicorns) among others.
+9. English also has many words of more or less unique function, including interjections (oh, ah), negatives (no, not), politeness markers (please, thank you), and the existential 'there' (there are horses but not unicorns) among others.  
 
 - Gold standard: 
 
 ~~~ conllu
 # this is one sentence
-1	English	English	PROPN	NNP	_	3	nsubj	_	_
-2	also	also	ADV	RB	_	3	advmod	_	_
-3	has	have	VERB	VBZ	_	0	root	_	_
-4	many	many	ADJ	JJ	_	5	amod	_	_
-5	words	word	NOUN	NNS	_	3	obj	_	_
-6	of	of	ADP	IN	_	11	case	_	_
-7	more	more	ADJ	JJR	_	11	amod	_	_
-8	or	or	CCONJ	CC	_	7	cc	_	_
-9	less	less	ADJ	JJR	_	8	dep	_	_
-10	unique	unique	ADJ	JJ	_	11	amod	_	_
-11	function	function	NOUN	NN	_	5	nmod	_	_
-12	,	,	PUNCT	,	_	13	punct	_	_
-13	includeing	includee	VERB	VBG	_	11	dep	_	_
-14	interjections	interjection	NOUN	NNS	_	13	obj	_	_
-15	(	(	PUNCT	-LRB-	_	18	punct	_	_
-16	oh	oh	INTJ	UH	_	18	dep	_	_
-17	,	,	PUNCT	,	_	16	punct	_	_
-18	ah	ah	INTJ	UH	_	14	dep	_	_
-19	)	)	PUNCT	-RRB-	_	18	punct	_	_
-20	,	,	PUNCT	,	_	13	punct	_	_
-21	negatives	negative	NOUN	NNS	_	13	conj	_	_
-22	(	(	PUNCT	-LRB-	_	25	punct	_	_
-23	no	no	ADV	RB	_	25	dep	_	_
-24	,	,	PUNCT	,	_	23	punct	_	_
-25	not	not	ADV	RB	_	21	dep	_	_
-26	)	)	PUNCT	-RRB-	_	25	punct	_	_
-27	,	,	PUNCT	,	_	13	punct	_	_
-28	politeness	politeness	NOUN	NN	_	29	compound	_	_
-29	markers	marker	NOUN	NNS	_	13	conj	_	_
-30	(	(	PUNCT	-LRB-	_	33	punct	_	_
-31	please	please	INTJ	UH	_	33	dep	_	_
-32	,	,	PUNCT	,	_	31	punct	_	_
-33	thank	thank	VERB	VB	_	29	dep	_	_
-34	you	you	PRON	PRP	_	33	obj	_	_
-35	)	)	PUNCT	-RRB-	_	33	punct	_	_
-36	,	,	PUNCT	,	_	13	punct	_	_
-37	and	and	CCONJ	CC	_	13	cc	_	_
-38	the	the	DET	DT	_	41	dep	_	_
-39	existential	existential	ADJ	JJ	_	41	dep	_	_
-40	'	'	PUNCT	``	_	41	punct	_	_
-41	there	there	ADV	RB	_	37	dep	_	_
-42	'	'	PUNCT	''	_	41	punct	_	_
-43	(	(	PUNCT	-LRB-	_	45	punct	_	_
-44	there	there	PRON	EX	_	45	dep	_	_
-45	are	be	VERB	VBP	_	41	dep	_	_
-46	horses	horse	NOUN	NNS	_	45	dep	_	_
-47	but	but	CCONJ	CC	_	46	cc	_	_
-48	not	not	PART	RB	_	47	dep	_	_
-49	unicorns	unicorn	NOUN	NNS	_	47	dep	_	_
-50	)	)	PUNCT	-RRB-	_	13	punct	_	_
-51	among	among	ADP	IN	_	52	case	_	_
-52	others	other	NOUN	NNS	_	13	obl	_	_
-53	.	.	PUNCT	.	_	3	punct	_	_
+1	English	English	NNP	NNP	_	3	nsubj	_	_
+2	also	also	RB	RB	_	3	advmod	_	_
+3	has	have	VBZ	VBZ	_	0	root	_	_
+4	many	many	JJ	JJ	_	5	amod	_	_
+5	words	word	NNS	NNS	_	3	obj	_	_
+6	of	of	IN	IN	_	11	case	_	_
+7	more	more	JJR	JJR	_	11	amod	_	_
+8	or	or	CC	CC	_	7	cc	_	_
+9	less	less	JJR	JJR	_	8	dep	_	_
+10	unique	unique	JJ	JJ	_	11	amod	_	_
+11	function	function	NN	NN	_	5	nmod	_	_
+12	,	,	,	,	_	13	punct	_	_
+13	includeing	includee	VBG	VBG	_	11	dep	_	_
+14	interjections	interjection	NNS	NNS	_	13	obj	_	_
+15	(	(	-LRB-	-LRB-	_	18	punct	_	_
+16	oh	oh	UH	UH	_	18	dep	_	_
+17	,	,	,	,	_	16	punct	_	_
+18	ah	ah	UH	UH	_	14	dep	_	_
+19	)	)	-RRB-	-RRB-	_	18	punct	_	_
+20	,	,	,	,	_	13	punct	_	_
+21	negatives	negative	NNS	NNS	_	13	conj	_	_
+22	(	(	-LRB-	-LRB-	_	25	punct	_	_
+23	no	no	RB	RB	_	25	dep	_	_
+24	,	,	,	,	_	23	punct	_	_
+25	not	not	RB	RB	_	21	dep	_	_
+26	)	)	-RRB-	-RRB-	_	25	punct	_	_
+27	,	,	,	,	_	13	punct	_	_
+28	politeness	politeness	NN	NN	_	29	compound	_	_
+29	markers	marker	NNS	NNS	_	13	conj	_	_
+30	(	(	-LRB-	-LRB-	_	33	punct	_	_
+31	please	please	UH	UH	_	33	dep	_	_
+32	,	,	,	,	_	31	punct	_	_
+33	thank	thank	VB	VB	_	29	dep	_	_
+34	you	you	PRP	PRP	_	33	obj	_	_
+35	)	)	-RRB-	-RRB-	_	33	punct	_	_
+36	,	,	,	,	_	13	punct	_	_
+37	and	and	CC	CC	_	13	cc	_	_
+38	the	the	DT	DT	_	41	dep	_	_
+39	existential	existential	JJ	JJ	_	41	dep	_	_
+40	'	'	``	``	_	41	punct	_	_
+41	there	there	RB	RB	_	37	dep	_	_
+42	'	'	''	''	_	41	punct	_	_
+43	(	(	-LRB-	-LRB-	_	45	punct	_	_
+44	there	there	EX	EX	_	45	dep	_	_
+45	are	be	VBP	VBP	_	41	dep	_	_
+46	horses	horse	NNS	NNS	_	45	dep	_	_
+47	but	but	CC	CC	_	46	cc	_	_
+48	not	not	RB	RB	_	47	dep	_	_
+49	unicorns	unicorn	NNS	NNS	_	47	dep	_	_
+50	)	)	-RRB-	-RRB-	_	13	punct	_	_
+51	among	among	IN	IN	_	52	case	_	_
+52	others	other	NNS	NNS	_	13	obl	_	_
+53	.	.	.	.	_	3	punct	_	_
 
 ~~~
 
