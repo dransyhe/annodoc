@@ -17,7 +17,6 @@ Gold standard:
 8	a	a	DET	DT	_	9	det	_	_
 9	drum	drum	NOUN	NN	_	7	obj	_	_
 10	.	.	PUNCT	.	_	7	punct	_	_
-
 ~~~
 
 Unlexicalised PCFG:
@@ -51,7 +50,6 @@ root(ROOT-0, open-7)
 det(drum-9, a-8)
 obj(open-7, drum-9)
 punct(open-7, .-10)
-
 ~~~
 {:#simple-example-parse-2 .sdparse tabs="yes"}
 
