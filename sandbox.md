@@ -5,6 +5,8 @@ title:  'Sandbox'
 
 # Sandbox
 
+sandbox
+
 This file is intended as a "sandbox" for trying out the editing
 features. Feel free to make changes by clicking the "edit page" link
 at the top. (You need to be logged in to GitHub and have write
