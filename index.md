@@ -3,7 +3,7 @@ layout: entry
 title: Annodoc annotation documentation support system
 ---
 
-Golden standard: 
+Gold standard: 
 
 ~~~ conllu
 # this is one sentence
