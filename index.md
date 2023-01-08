@@ -40,7 +40,7 @@ obj(open-7, drum-9)
 - NN-based dependency parser:
 
 ~~~ sdparse
-My/PRP$, aunt/NN, 's/POS, can/MD, opener/NN, can/MD, open/VB, a/DT, drum/NN, ./.
+My/PRP$ aunt/NN 's/POS can/MD opener/NN can/MD open/VB a/DT drum/NN ./.
 nmod:poss(aunt-2, My-1)
 nmod:poss(opener-5, aunt-2)
 case(aunt-2, 's-3)
@@ -90,7 +90,7 @@ obl:in(broke-4, park-9)
 - NN-based dependency parser:
 
 ~~~ sdparse
-The/DT, old/JJ, car/NN, broke/VBD, down/RP, in/IN, the/DT, car/NN, park/NN, ./.
+The/DT old/JJ car/NN broke/VBD down/RP in/IN the/DT car/NN park/NN ./.
 det(car-3, The-1)
 amod(car-3, old-2)
 nsubj(broke-4, car-3)
@@ -143,7 +143,7 @@ obj(stole-8, TV-10)
 - NN-based dependency parser:
 
 ~~~ sdparse
-At/RB, least/RBS, two/CD, men/NNS, broke/VBD, in/IN, and/CC, stole/VBD, my/PRP$, TV/NN, ./.
+At/RB least/RBS two/CD men/NNS broke/VBD in/IN and/CC stole/VBD my/PRP$ TV/NN ./.
 case(least-2, At-1)
 obl:npmod(two-3, least-2)
 nummod(men-4, two-3)
@@ -195,7 +195,7 @@ obl:with(broke-5, partners-9)
 - NN-based dependency parser:
 
 ~~~ sdparse
-Kim/NNP, and/CC, Sandy/NNP, both/CC, broke/VBD, up/RP, with/IN, their/PRP$, partners/NNS, ./.
+Kim/NNP and/CC Sandy/NNP both/CC broke/VBD up/RP with/IN their/PRP$ partners/NNS ./.
 nsubj(broke-5, Kim-1)
 cc(Sandy-3, and-2)
 conj(Kim-1, Sandy-3)
@@ -259,7 +259,7 @@ root(ROOT-0, escaped-14)
 - NN-based dependency parser:
 
 ~~~ sdparse
-The/DT, horse/NN, as/RB, well/RB, as/IN, the/DT, rabbits/NNS, which/WDT, we/PRP, wanted/VBD, to/TO, eat/VB, has/VBZ, escaped/VBN, ./.
+The/DT horse/NN as/RB well/RB as/IN the/DT rabbits/NNS which/WDT we/PRP wanted/VBD to/TO eat/VB has/VBZ escaped/VBN ./.
 det(horse-2, The-1)
 nsubj(escaped-14, horse-2)
 cc(rabbits-7, as-3)
@@ -327,7 +327,7 @@ obl:in(sold-9, February-15)
 - NN-based dependency parser:
 
 ~~~ sdparse
-It/PRP, was/VBD, my/PRP$, aunt/NN, 's/POS, car/NN, which/WDT, we/PRP, sold/VBD, at/IN, auction/NN, last/JJ, year/NN, in/IN, February/NNP, ./.
+It/PRP was/VBD my/PRP$ aunt/NN 's/POS car/NN which/WDT we/PRP sold/VBD at/IN auction/NN last/JJ year/NN in/IN February/NNP ./.
 nsubj(car-6, It-1)
 cop(car-6, was-2)
 nmod:poss(aunt-4, my-3)
@@ -404,7 +404,7 @@ obj(breaking-19, point-20)
 - NN-based dependency parser:
 
 ~~~ sdparse
-Natural/JJ, disasters/NNS, –/SYM, storms/NNS, ,/,, flooding/NN, ,/,, hurricanes/NNS, –/SYM, occur/VBP, infrequently/RB, but/CC, cause/VB, devastation/NN, that/IN, strains/NNS, resources/NNS, to/IN, breaking/VBG, point/NN, ./.
+Natural/JJ disasters/NNS –/SYM storms/NNS ,/, flooding/NN ,/, hurricanes/NNS –/SYM occur/VBP infrequently/RB but/CC cause/VB devastation/NN that/IN strains/NNS resources/NNS to/IN breaking/VBG point/NN ./.
 amod(disasters-2, Natural-1)
 compound(storms-4, disasters-2)
 dep(storms-4, –-3)
@@ -498,7 +498,7 @@ advcl(as-17, available-26)
 - NN-based dependency parser:
 
 ~~~ sdparse
-Letters/NNPS, delivered/VBD, on/IN, time/NN, by/IN, old/JJ, -/HYPH, fashioned/JJ, means/NNS, are/VBP, increasingly/RB, rare/JJ, ,/,, so/IN, it/PRP, is/VBZ, as/RB, well/RB, that/IN, that/DT, is/VBZ, not/RB, the/DT, only/JJ, option/NN, available/JJ, ./.
+Letters/NNPS delivered/VBD on/IN time/NN by/IN old/JJ -/HYPH fashioned/JJ means/NNS are/VBP increasingly/RB rare/JJ ,/, so/IN it/PRP is/VBZ as/RB well/RB that/IN that/DT is/VBZ not/RB the/DT only/JJ option/NN available/JJ ./.
 nsubj(delivered-2, Letters-1)
 subj(rare-12, delivered-2)
 case(time-4, on-3)
@@ -639,7 +639,7 @@ nmod:among(words-5, others-52)
 - NN-based dependency parser:
 
 ~~~ sdparse
-English/NNP, also/RB, has/VBZ, many/JJ, words/NNS, of/IN, more/RBR, or/CC, less/RBR, unique/JJ, function/NN, ,/,, including/VBG, interjections/NNS, (/-LRB-, oh/UH, ,/,, ah/UH, )/-RRB-, ,/,, negatives/NNS, (/-LRB-, no/UH, ,/,, not/RB, )/-RRB-, ,/,, politeness/NN, markers/NNS, (/-LRB-, please/UH, ,/,, thank/VBP, you/PRP, )/-RRB-, ,/,, and/CC, the/DT, existential/JJ, '/``, there/EX, '/'', (/-LRB-, there/EX, are/VBP, horses/NNS, but/CC, not/RB, unicorns/NNS, )/-RRB-, among/IN, others/NNS, ./.
+English/NNP also/RB has/VBZ many/JJ words/NNS of/IN more/RBR or/CC less/RBR unique/JJ function/NN ,/, including/VBG interjections/NNS (/-LRB- oh/UH ,/, ah/UH )/-RRB- ,/, negatives/NNS (/-LRB- no/UH ,/, not/RB )/-RRB- ,/, politeness/NN markers/NNS (/-LRB- please/UH ,/, thank/VBP you/PRP )/-RRB- ,/, and/CC the/DT existential/JJ '/`` there/EX '/'' (/-LRB- there/EX are/VBP horses/NNS but/CC not/RB unicorns/NNS )/-RRB- among/IN others/NNS ./.
 nsubj(has-3, English-1)
 advmod(has-3, also-2)
 root(ROOT-0, has-3)
@@ -748,7 +748,7 @@ nmod:for(tagset-13, Corpus-17)
 - NN-based dependency parser:
 
 ~~~ sdparse
-The/DT, Penn/NNP, Treebank/NNP, tagset/NN, was/VBD, culled/VBN, from/IN, the/DT, original/JJ, 87/CD, -/HYPH, tag/NN, tagset/NN, for/IN, the/DT, Brown/NNP, Corpus/NNP, ./.
+The/DT Penn/NNP Treebank/NNP tagset/NN was/VBD culled/VBN from/IN the/DT original/JJ 87/CD -/HYPH tag/NN tagset/NN for/IN the/DT Brown/NNP Corpus/NNP ./.
 det(tagset-4, The-1)
 compound(Treebank-3, Penn-2)
 compound(tagset-4, Treebank-3)
@@ -869,7 +869,7 @@ conj:and(do-22, have-39)
 - NN-based dependency parser:
 
 ~~~ sdparse
-For/IN, example/NN, the/DT, original/JJ, Brown/NNP, and/CC, C5/NN, tagsets/NNS, include/VBP, a/DT, separate/JJ, tag/NN, for/IN, each/DT, of/IN, the/DT, different/JJ, forms/NNS, of/IN, the/DT, verbs/NNS, do/VBP, (/-LRB-, e.g./FW, C5/NN, tag/NN, VDD/NN, for/IN, did/VBD, and/CC, VDG/NNP, tag/NN, for/IN, doing/VBG, )/-RRB-, ,/,, be/VB, and/CC, have/VB, ./.
+For/IN example/NN the/DT original/JJ Brown/NNP and/CC C5/NN tagsets/NNS include/VBP a/DT separate/JJ tag/NN for/IN each/DT of/IN the/DT different/JJ forms/NNS of/IN the/DT verbs/NNS do/VBP (/-LRB- e.g./FW C5/NN tag/NN VDD/NN for/IN did/VBD and/CC VDG/NNP tag/NN for/IN doing/VBG )/-RRB- ,/, be/VB and/CC have/VB ./.
 case(example-2, For-1)
 obl(include-9, example-2)
 det(tagsets-8, the-3)
