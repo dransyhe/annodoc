@@ -33,7 +33,6 @@ Unlexicalised PCFG:
 8	a	a	DET	DT	_	9	det	_	_
 9	drum	drum	NOUN	NN	_	7	obj	_	_
 10	.	.	PUNCT	.	_	7	punct	_	_
-
 ~~~
 
 NN-based dependency parser:
