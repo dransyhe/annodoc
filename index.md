@@ -3,6 +3,26 @@ layout: entry
 title: Annodoc annotation documentation support system
 ---
 
+~~~ conllu
+# this is one sentence
+1	My	my	PRON	PRP$	_	2	nmod:poss	_	_
+2	aunt	aunt	NOUN	NN	_	7	nsubj	_	_
+3	's	's	PART	POS	_	5	case	_	_
+4	can	can	NOUN	NN	_	5	compound	_	_
+5	opener	opener	NOUN	NN	_	2	nmod:poss	_	_
+6	can	can	AUX	MD	_	7	aux	_	_
+7	open	open	VERB	VB	_	0	root	_	_
+8	a	a	DET	DT	_	9	det	_	_
+9	drum	drum	NOUN	NN	_	7	obj	_	_
+10	.	.	PUNCT	.	_	7	punct	_	_
+~~~
+
+~~~
+Dogs run
+nsubj(run, Dogs)
+~~~
+{:#simple-example-parse-2 .sdparse tabs="yes"}
+
 This is a page of documentation created using the Annodoc
 system. It serves a double purpose as *documentation* for the Annodoc
 system and as a *template* that you can use as a starting point for
