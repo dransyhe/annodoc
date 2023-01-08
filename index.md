@@ -5,6 +5,153 @@ title: Annodoc annotation documentation support system
 
 1. My aunt's can opener can open a drum.
 - Gold standard: 
+
+~~~ conllu
+# this is one sentence
+1	My	my	PRON	PRP$	_	2	nmod:poss	_	_
+2	aunt	aunt	NOUN	NN	_	7	nsubj	_	_
+3	's	's	PART	POS	_	5	case	_	_
+4	can	can	NOUN	NN	_	5	compound	_	_
+5	opener	opener	NOUN	NN	_	2	nmod:poss	_	_
+6	can	can	AUX	MD	_	7	aux	_	_
+7	open	open	VERB	VB	_	0	root	_	_
+8	a	a	DET	DT	_	9	det	_	_
+9	drum	drum	NOUN	NN	_	7	obj	_	_
+10	.	.	PUNCT	.	_	7	punct	_	_
+
+~~~
+
+- Unlexicalised PCFG:
+
+~~~
+My/PRP$ aunt/NN 's/POS can/NN opener/NN can/MD open/VB a/DT drum/NN ./.
+nmod:poss(aunt-2, My-1)
+nmod:poss(opener-5, aunt-2)
+case(aunt-2, 's-3)
+compound(opener-5, can-4)
+nsubj(open-7, opener-5)
+aux(open-7, can-6)
+root(ROOT-0, open-7)
+det(drum-9, a-8)
+obj(open-7, drum-9)
+~~~
+
+- NN-based dependency parser:
+
+~~~
+My/PRP$, aunt/NN, 's/POS, can/MD, opener/NN, can/MD, open/VB, a/DT, drum/NN, ./.
+nmod:poss(aunt-2, My-1)
+nmod:poss(opener-5, aunt-2)
+case(aunt-2, 's-3)
+aux(opener-5, can-4)
+nsubj(open-7, opener-5)
+aux(open-7, can-6)
+root(ROOT-0, open-7)
+det(drum-9, a-8)
+obj(open-7, drum-9)
+punct(open-7, .-10)
+~~~
+
+2. The old car broke down in the car park.
+- Gold standard: 
+
+~~~ conllu
+# this is one sentence
+1	The	the	DET	DT	_	3	det	_	_
+2	old	old	ADJ	JJ	_	3	amod	_	_
+3	car	car	NOUN	NN	_	4	nsubj	_	_
+4	broke	break	VERB	VBD	_	0	root	_	_
+5	down	down	ADP	RP	_	4	dep	_	_
+6	in	in	ADP	IN	_	9	case	_	_
+7	the	the	DET	DT	_	9	det	_	_
+8	car	car	NOUN	NN	_	9	compound	_	_
+9	park	park	NOUN	NN	_	4	obl	_	_
+10	.	.	PUNCT	.	_	4	punct	_	_
+
+~~~
+
+- Unlexicalised PCFG:
+
+~~~
+The/DT old/JJ car/NN broke/VBD down/RP in/IN the/DT car/NN park/NN ./.
+det(car-3, The-1)
+amod(car-3, old-2)
+nsubj(broke-4, car-3)
+root(ROOT-0, broke-4)
+compound:prt(broke-4, down-5)
+case(park-9, in-6)
+det(park-9, the-7)
+compound(park-9, car-8)
+obl:in(broke-4, park-9)
+~~~
+
+- NN-based dependency parser:
+
+~~~
+The/DT, old/JJ, car/NN, broke/VBD, down/RP, in/IN, the/DT, car/NN, park/NN, ./.
+det(car-3, The-1)
+amod(car-3, old-2)
+nsubj(broke-4, car-3)
+root(ROOT-0, broke-4)
+compound:prt(broke-4, down-5)
+case(park-9, in-6)
+det(park-9, the-7)
+compound(park-9, car-8)
+obl(broke-4, park-9)
+punct(broke-4, .-10)
+~~~
+
+3. At least two men broke in and stole my TV.
+- Gold standard: 
+
+~~~ conllu
+# this is one sentence
+1	My	my	PRON	PRP$	_	2	nmod:poss	_	_
+2	aunt	aunt	NOUN	NN	_	7	nsubj	_	_
+3	's	's	PART	POS	_	5	case	_	_
+4	can	can	NOUN	NN	_	5	compound	_	_
+5	opener	opener	NOUN	NN	_	2	nmod:poss	_	_
+6	can	can	AUX	MD	_	7	aux	_	_
+7	open	open	VERB	VB	_	0	root	_	_
+8	a	a	DET	DT	_	9	det	_	_
+9	drum	drum	NOUN	NN	_	7	obj	_	_
+10	.	.	PUNCT	.	_	7	punct	_	_
+
+~~~
+
+- Unlexicalised PCFG:
+
+~~~
+My/PRP$ aunt/NN 's/POS can/NN opener/NN can/MD open/VB a/DT drum/NN ./.
+nmod:poss(aunt-2, My-1)
+nmod:poss(opener-5, aunt-2)
+case(aunt-2, 's-3)
+compound(opener-5, can-4)
+nsubj(open-7, opener-5)
+aux(open-7, can-6)
+root(ROOT-0, open-7)
+det(drum-9, a-8)
+obj(open-7, drum-9)
+~~~
+
+- NN-based dependency parser:
+
+~~~
+My/PRP$, aunt/NN, 's/POS, can/MD, opener/NN, can/MD, open/VB, a/DT, drum/NN, ./.
+nmod:poss(aunt-2, My-1)
+nmod:poss(opener-5, aunt-2)
+case(aunt-2, 's-3)
+aux(opener-5, can-4)
+nsubj(open-7, opener-5)
+aux(open-7, can-6)
+root(ROOT-0, open-7)
+det(drum-9, a-8)
+obj(open-7, drum-9)
+punct(open-7, .-10)
+~~~
+
+4. My aunt's can opener can open a drum.
+- Gold standard: 
 ~~~ conllu
 # this is one sentence
 1	My	my	PRON	PRP$	_	2	nmod:poss	_	_
@@ -34,7 +181,337 @@ det(drum-9, a-8)
 obj(open-7, drum-9)
 ~~~
 
-NN-based dependency parser:
+- NN-based dependency parser:
+
+~~~
+My/PRP$, aunt/NN, 's/POS, can/MD, opener/NN, can/MD, open/VB, a/DT, drum/NN, ./.
+nmod:poss(aunt-2, My-1)
+nmod:poss(opener-5, aunt-2)
+case(aunt-2, 's-3)
+aux(opener-5, can-4)
+nsubj(open-7, opener-5)
+aux(open-7, can-6)
+root(ROOT-0, open-7)
+det(drum-9, a-8)
+obj(open-7, drum-9)
+punct(open-7, .-10)
+~~~
+
+
+5. My aunt's can opener can open a drum.
+- Gold standard: 
+~~~ conllu
+# this is one sentence
+1	My	my	PRON	PRP$	_	2	nmod:poss	_	_
+2	aunt	aunt	NOUN	NN	_	7	nsubj	_	_
+3	's	's	PART	POS	_	5	case	_	_
+4	can	can	NOUN	NN	_	5	compound	_	_
+5	opener	opener	NOUN	NN	_	2	nmod:poss	_	_
+6	can	can	AUX	MD	_	7	aux	_	_
+7	open	open	VERB	VB	_	0	root	_	_
+8	a	a	DET	DT	_	9	det	_	_
+9	drum	drum	NOUN	NN	_	7	obj	_	_
+10	.	.	PUNCT	.	_	7	punct	_	_
+
+~~~
+
+- Unlexicalised PCFG:
+~~~
+My/PRP$ aunt/NN 's/POS can/NN opener/NN can/MD open/VB a/DT drum/NN ./.
+nmod:poss(aunt-2, My-1)
+nmod:poss(opener-5, aunt-2)
+case(aunt-2, 's-3)
+compound(opener-5, can-4)
+nsubj(open-7, opener-5)
+aux(open-7, can-6)
+root(ROOT-0, open-7)
+det(drum-9, a-8)
+obj(open-7, drum-9)
+~~~
+
+- NN-based dependency parser:
+
+~~~
+My/PRP$, aunt/NN, 's/POS, can/MD, opener/NN, can/MD, open/VB, a/DT, drum/NN, ./.
+nmod:poss(aunt-2, My-1)
+nmod:poss(opener-5, aunt-2)
+case(aunt-2, 's-3)
+aux(opener-5, can-4)
+nsubj(open-7, opener-5)
+aux(open-7, can-6)
+root(ROOT-0, open-7)
+det(drum-9, a-8)
+obj(open-7, drum-9)
+punct(open-7, .-10)
+~~~
+
+6. My aunt's can opener can open a drum.
+- Gold standard: 
+~~~ conllu
+# this is one sentence
+1	My	my	PRON	PRP$	_	2	nmod:poss	_	_
+2	aunt	aunt	NOUN	NN	_	7	nsubj	_	_
+3	's	's	PART	POS	_	5	case	_	_
+4	can	can	NOUN	NN	_	5	compound	_	_
+5	opener	opener	NOUN	NN	_	2	nmod:poss	_	_
+6	can	can	AUX	MD	_	7	aux	_	_
+7	open	open	VERB	VB	_	0	root	_	_
+8	a	a	DET	DT	_	9	det	_	_
+9	drum	drum	NOUN	NN	_	7	obj	_	_
+10	.	.	PUNCT	.	_	7	punct	_	_
+
+~~~
+
+- Unlexicalised PCFG:
+~~~
+My/PRP$ aunt/NN 's/POS can/NN opener/NN can/MD open/VB a/DT drum/NN ./.
+nmod:poss(aunt-2, My-1)
+nmod:poss(opener-5, aunt-2)
+case(aunt-2, 's-3)
+compound(opener-5, can-4)
+nsubj(open-7, opener-5)
+aux(open-7, can-6)
+root(ROOT-0, open-7)
+det(drum-9, a-8)
+obj(open-7, drum-9)
+~~~
+
+- NN-based dependency parser:
+
+~~~
+My/PRP$, aunt/NN, 's/POS, can/MD, opener/NN, can/MD, open/VB, a/DT, drum/NN, ./.
+nmod:poss(aunt-2, My-1)
+nmod:poss(opener-5, aunt-2)
+case(aunt-2, 's-3)
+aux(opener-5, can-4)
+nsubj(open-7, opener-5)
+aux(open-7, can-6)
+root(ROOT-0, open-7)
+det(drum-9, a-8)
+obj(open-7, drum-9)
+punct(open-7, .-10)
+~~~
+
+7. My aunt's can opener can open a drum.
+- Gold standard: 
+~~~ conllu
+# this is one sentence
+1	My	my	PRON	PRP$	_	2	nmod:poss	_	_
+2	aunt	aunt	NOUN	NN	_	7	nsubj	_	_
+3	's	's	PART	POS	_	5	case	_	_
+4	can	can	NOUN	NN	_	5	compound	_	_
+5	opener	opener	NOUN	NN	_	2	nmod:poss	_	_
+6	can	can	AUX	MD	_	7	aux	_	_
+7	open	open	VERB	VB	_	0	root	_	_
+8	a	a	DET	DT	_	9	det	_	_
+9	drum	drum	NOUN	NN	_	7	obj	_	_
+10	.	.	PUNCT	.	_	7	punct	_	_
+
+~~~
+
+- Unlexicalised PCFG:
+~~~
+My/PRP$ aunt/NN 's/POS can/NN opener/NN can/MD open/VB a/DT drum/NN ./.
+nmod:poss(aunt-2, My-1)
+nmod:poss(opener-5, aunt-2)
+case(aunt-2, 's-3)
+compound(opener-5, can-4)
+nsubj(open-7, opener-5)
+aux(open-7, can-6)
+root(ROOT-0, open-7)
+det(drum-9, a-8)
+obj(open-7, drum-9)
+~~~
+
+- NN-based dependency parser:
+
+~~~
+My/PRP$, aunt/NN, 's/POS, can/MD, opener/NN, can/MD, open/VB, a/DT, drum/NN, ./.
+nmod:poss(aunt-2, My-1)
+nmod:poss(opener-5, aunt-2)
+case(aunt-2, 's-3)
+aux(opener-5, can-4)
+nsubj(open-7, opener-5)
+aux(open-7, can-6)
+root(ROOT-0, open-7)
+det(drum-9, a-8)
+obj(open-7, drum-9)
+punct(open-7, .-10)
+~~~
+
+8. My aunt's can opener can open a drum.
+- Gold standard: 
+~~~ conllu
+# this is one sentence
+1	My	my	PRON	PRP$	_	2	nmod:poss	_	_
+2	aunt	aunt	NOUN	NN	_	7	nsubj	_	_
+3	's	's	PART	POS	_	5	case	_	_
+4	can	can	NOUN	NN	_	5	compound	_	_
+5	opener	opener	NOUN	NN	_	2	nmod:poss	_	_
+6	can	can	AUX	MD	_	7	aux	_	_
+7	open	open	VERB	VB	_	0	root	_	_
+8	a	a	DET	DT	_	9	det	_	_
+9	drum	drum	NOUN	NN	_	7	obj	_	_
+10	.	.	PUNCT	.	_	7	punct	_	_
+
+~~~
+
+- Unlexicalised PCFG:
+~~~
+My/PRP$ aunt/NN 's/POS can/NN opener/NN can/MD open/VB a/DT drum/NN ./.
+nmod:poss(aunt-2, My-1)
+nmod:poss(opener-5, aunt-2)
+case(aunt-2, 's-3)
+compound(opener-5, can-4)
+nsubj(open-7, opener-5)
+aux(open-7, can-6)
+root(ROOT-0, open-7)
+det(drum-9, a-8)
+obj(open-7, drum-9)
+~~~
+
+- NN-based dependency parser:
+
+~~~
+My/PRP$, aunt/NN, 's/POS, can/MD, opener/NN, can/MD, open/VB, a/DT, drum/NN, ./.
+nmod:poss(aunt-2, My-1)
+nmod:poss(opener-5, aunt-2)
+case(aunt-2, 's-3)
+aux(opener-5, can-4)
+nsubj(open-7, opener-5)
+aux(open-7, can-6)
+root(ROOT-0, open-7)
+det(drum-9, a-8)
+obj(open-7, drum-9)
+punct(open-7, .-10)
+~~~
+
+9. My aunt's can opener can open a drum.
+- Gold standard: 
+~~~ conllu
+# this is one sentence
+1	My	my	PRON	PRP$	_	2	nmod:poss	_	_
+2	aunt	aunt	NOUN	NN	_	7	nsubj	_	_
+3	's	's	PART	POS	_	5	case	_	_
+4	can	can	NOUN	NN	_	5	compound	_	_
+5	opener	opener	NOUN	NN	_	2	nmod:poss	_	_
+6	can	can	AUX	MD	_	7	aux	_	_
+7	open	open	VERB	VB	_	0	root	_	_
+8	a	a	DET	DT	_	9	det	_	_
+9	drum	drum	NOUN	NN	_	7	obj	_	_
+10	.	.	PUNCT	.	_	7	punct	_	_
+
+~~~
+
+- Unlexicalised PCFG:
+~~~
+My/PRP$ aunt/NN 's/POS can/NN opener/NN can/MD open/VB a/DT drum/NN ./.
+nmod:poss(aunt-2, My-1)
+nmod:poss(opener-5, aunt-2)
+case(aunt-2, 's-3)
+compound(opener-5, can-4)
+nsubj(open-7, opener-5)
+aux(open-7, can-6)
+root(ROOT-0, open-7)
+det(drum-9, a-8)
+obj(open-7, drum-9)
+~~~
+
+- NN-based dependency parser:
+
+~~~
+My/PRP$, aunt/NN, 's/POS, can/MD, opener/NN, can/MD, open/VB, a/DT, drum/NN, ./.
+nmod:poss(aunt-2, My-1)
+nmod:poss(opener-5, aunt-2)
+case(aunt-2, 's-3)
+aux(opener-5, can-4)
+nsubj(open-7, opener-5)
+aux(open-7, can-6)
+root(ROOT-0, open-7)
+det(drum-9, a-8)
+obj(open-7, drum-9)
+punct(open-7, .-10)
+~~~
+
+10. My aunt's can opener can open a drum.
+- Gold standard: 
+~~~ conllu
+# this is one sentence
+1	My	my	PRON	PRP$	_	2	nmod:poss	_	_
+2	aunt	aunt	NOUN	NN	_	7	nsubj	_	_
+3	's	's	PART	POS	_	5	case	_	_
+4	can	can	NOUN	NN	_	5	compound	_	_
+5	opener	opener	NOUN	NN	_	2	nmod:poss	_	_
+6	can	can	AUX	MD	_	7	aux	_	_
+7	open	open	VERB	VB	_	0	root	_	_
+8	a	a	DET	DT	_	9	det	_	_
+9	drum	drum	NOUN	NN	_	7	obj	_	_
+10	.	.	PUNCT	.	_	7	punct	_	_
+
+~~~
+
+- Unlexicalised PCFG:
+~~~
+My/PRP$ aunt/NN 's/POS can/NN opener/NN can/MD open/VB a/DT drum/NN ./.
+nmod:poss(aunt-2, My-1)
+nmod:poss(opener-5, aunt-2)
+case(aunt-2, 's-3)
+compound(opener-5, can-4)
+nsubj(open-7, opener-5)
+aux(open-7, can-6)
+root(ROOT-0, open-7)
+det(drum-9, a-8)
+obj(open-7, drum-9)
+~~~
+
+- NN-based dependency parser:
+
+~~~
+My/PRP$, aunt/NN, 's/POS, can/MD, opener/NN, can/MD, open/VB, a/DT, drum/NN, ./.
+nmod:poss(aunt-2, My-1)
+nmod:poss(opener-5, aunt-2)
+case(aunt-2, 's-3)
+aux(opener-5, can-4)
+nsubj(open-7, opener-5)
+aux(open-7, can-6)
+root(ROOT-0, open-7)
+det(drum-9, a-8)
+obj(open-7, drum-9)
+punct(open-7, .-10)
+~~~
+
+11. My aunt's can opener can open a drum.
+- Gold standard: 
+~~~ conllu
+# this is one sentence
+1	My	my	PRON	PRP$	_	2	nmod:poss	_	_
+2	aunt	aunt	NOUN	NN	_	7	nsubj	_	_
+3	's	's	PART	POS	_	5	case	_	_
+4	can	can	NOUN	NN	_	5	compound	_	_
+5	opener	opener	NOUN	NN	_	2	nmod:poss	_	_
+6	can	can	AUX	MD	_	7	aux	_	_
+7	open	open	VERB	VB	_	0	root	_	_
+8	a	a	DET	DT	_	9	det	_	_
+9	drum	drum	NOUN	NN	_	7	obj	_	_
+10	.	.	PUNCT	.	_	7	punct	_	_
+
+~~~
+
+- Unlexicalised PCFG:
+~~~
+My/PRP$ aunt/NN 's/POS can/NN opener/NN can/MD open/VB a/DT drum/NN ./.
+nmod:poss(aunt-2, My-1)
+nmod:poss(opener-5, aunt-2)
+case(aunt-2, 's-3)
+compound(opener-5, can-4)
+nsubj(open-7, opener-5)
+aux(open-7, can-6)
+root(ROOT-0, open-7)
+det(drum-9, a-8)
+obj(open-7, drum-9)
+~~~
+
+- NN-based dependency parser:
 
 ~~~
 My/PRP$, aunt/NN, 's/POS, can/MD, opener/NN, can/MD, open/VB, a/DT, drum/NN, ./.
